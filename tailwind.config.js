@@ -1,5 +1,9 @@
 module.exports = {
   content: ["./src/**/*.tsx"],
+  prefix: 'tw-',
+  corePlugins: {
+    preflight: false,
+  },
   theme: {
     extend: {
       colors: {
@@ -9,6 +13,7 @@ module.exports = {
 
         }
       },
+
       borderRadius: {
         md: '4px'
       }
@@ -18,4 +23,11 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("tailwind-scrollbar")
   ],
+  purge: [
+    "./public/**/*.html",
+    "./src/**/*.js",
+    "./src/**/*.jsx",
+    "./src/**/*.tsx",
+  ],
+
 }

@@ -2,8 +2,8 @@ import { CircleNotch } from "phosphor-react";
 
 export function Loading() {
   return (
-    <div className="w-6 h-6 flex items-center justify-center overflow-hidden animate-spin">
-      <CircleNotch weight="bold" className="w-4 h-4"/>
+    <div className="tw-w-6 tw-h-6 tw-flex tw-items-center tw-justify-center tw-overflow-hidden tw-animate-spin">
+      <CircleNotch weight="bold" className="tw-w-4 tw-h-4"/>
     </div>
   )
 }

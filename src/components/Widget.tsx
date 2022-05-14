@@ -5,14 +5,14 @@ import { WidgetForm } from './WidgetForm'
 export function Widget() {
 
   return (    
-    <Popover className="absolute bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col items-end">
+    <Popover className="tw-absolute tw-bottom-4 tw-right-4 md:tw-bottom-8 md:tw-right-8 tw-flex tw-flex-col tw-items-end tw-font-sans">
    <Popover.Panel><WidgetForm/></Popover.Panel> 
       <Popover.Button
-        className="bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group"
+        className="tw-bg-brand-500 tw-rounded-full tw-px-3 tw-h-12 tw-text-white tw-flex tw-items-center tw-group tw-border-none tw-font-sans"
       >
-        <ChatTeardropDots className="w-6 h-6" />        
-        <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-linear">
-          <span className="p-2">
+        <ChatTeardropDots className="tw-w-6 tw-h-6" />        
+        <span className="tw-font-sans tw-max-w-0 tw-overflow-hidden group-hover:tw-max-w-xs tw-transition-all tw-duration-500 tw-ease-linear">
+          <span className="tw-font-sans tw-p-2">
             Feedback
           </span>
         </span>
