@@ -13,8 +13,9 @@ export function ScreenshotButton({ onScreenshotTaken, screenshot }: FeedbackType
 
   async function handleTakeScreenshot() {
     setIsTakingScreenshot(true);
-
-    const canvas = await html2canvas(document.querySelector('html')!)
+    
+    const canvas = await html2canvas(document.body, {x:window.scrollX, y:window.scrollY, width:window.innerWidth, height:window.innerHeight})
+   // const canvas = await html2canvas(document.querySelector('html')!)
     const base64image = canvas.toDataURL('image/png' || 'image/jpeg')
 
     onScreenshotTaken(base64image)
@@ -27,9 +28,8 @@ export function ScreenshotButton({ onScreenshotTaken, screenshot }: FeedbackType
         type="button"
         className="tw-p-1 tw-w-10 tw-h-10 tw-rounded-md tw-border-transparent tw-flex tw-justify-end tw-items-end tw-text-zinc-400 hover:tw-text-zinc-100 tw-transition-colors"
         style={{
-          backgroundImage: `url(${screenshot})`,
-        /*   backgroundPosition: "right bottom",
-          backgroundSize: 180 */
+          backgroundImage: `url(${screenshot})`,        
+          backgroundSize: 180 
         }}
         onClick={() => onScreenshotTaken(null)}
         >

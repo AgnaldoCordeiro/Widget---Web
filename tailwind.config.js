@@ -1,9 +1,9 @@
 module.exports = {
   content: ["./src/**/*.tsx"],
   prefix: 'tw-',
-  corePlugins: {
-    preflight: false,
-  },
+  /*  corePlugins: {
+     preflight: false,
+   }, */
   theme: {
     extend: {
       colors: {
