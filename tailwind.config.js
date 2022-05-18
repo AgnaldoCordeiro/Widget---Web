@@ -1,19 +1,17 @@
 module.exports = {
   content: ["./src/**/*.tsx"],
   prefix: 'tw-',
-  /*  corePlugins: {
-     preflight: false,
-   }, */
+  corePlugins: {
+    preflight: false,
+  },
   theme: {
     extend: {
       colors: {
         brand: {
           300: '#996DFF',
           500: '#8257e6'
-
         }
       },
-
       borderRadius: {
         md: '4px'
       }
@@ -29,5 +27,4 @@ module.exports = {
     "./src/**/*.jsx",
     "./src/**/*.tsx",
   ],
-
 }
